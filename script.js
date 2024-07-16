@@ -1,5 +1,3 @@
-// please show for every product: price before and  after discount, thumbnail, title, description
-
 let url = "https://dummyjson.com/products"
 
 const Data = async ()=> {
