@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: grid;
+    grid-template-rows: 75px 1fr 150px;
+    grid-template-areas: "header"
+    "content"
+    "footer"
+    ;
+    font-family: "Roboto", sans-serif;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    
+}
+header .logo{
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    padding-top: 7px;
+    text-transform: uppercase;
+}
+
+nav{
+   font-size: 1.2em;
+   padding-top: 7px;
+   width: 15%;
+   text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    height: 80%;
+    align-items: center;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+nav a:hover{
+    background-color: #fff;
+    color: #333333;
+}
+
+#product-list{
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+    background-color: #fff;
+    border-color: 2px solid #E0E0E0;
+    color: #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.card .oldPirce{
+    text-decoration-line: line-through;
+}
+
+.card .description{
+    color: #757575;
+}
+
+footer{
+    grid-area: footer;
+    position: relative;
+    background-color: #4CAF50;
+    color: #fff;
+}
+footer p{
+    font-size: 1em;
+    padding: 10px;
+    text-align: left;
+}
+
+footer .copyRight{
+    position: absolute;
+    bottom: 5px;
+    right: 50%;
+}
+footer a{
+    text-decoration: none;
+    font-size: 4em;
+    color: #fff;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    
+}
+
+
+@media (max-width: 800px){
+    #product-list{
+        grid-template-columns:1fr 1fr;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap:5px;
+        height: 100%;
+        font-size: 0.5em;
+        text-align: center;
+    }
+    footer a{
+        position:unset;
+    }
+    footer .copyRight{
+        position: unset;
+        text-align: center;
+        font-size: 1.2em;
+        padding-bottom: 5pxx;
+    }
+}
+
+@media (max-width: 600px){
+    #product-list{
+        grid-template-columns:1fr;
+    }
+    
+}
